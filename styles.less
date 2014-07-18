@@ -243,6 +243,7 @@ body {
 				}
 			}
 		}
+		
 	}
 }
 
@@ -302,6 +303,69 @@ body {
 					padding: 5px;
 					font-size: 15px;
 					line-height: 23px;
+				}
+			}
+		}
+		footer {
+			.upper-footer {
+				height: auto;
+				overflow: hidden;
+				ul {
+					margin: 0 auto;
+					width: 100%;
+					overflow: hidden;
+					li {
+						margin: 0;
+						padding: 0;
+						.size(100%, 45px);
+						border-bottom: 1px solid gray;
+						float: left;
+						font: 16px "Myriad Web Pro";
+						line-height: 45px;
+						text-align: center;
+						a {
+							display: block;
+							.size(100%, 100%);
+							.transition(all, 0.5s, linear);
+							&.active {
+								color: @green;
+							}
+							&:hover {
+								background-color: #000000;
+								color: @green;
+							}
+						}
+					}
+				}
+			}
+			.lower-footer {
+				height: auto;
+				overflow: hidden;
+				p {
+					margin: 8px 0;
+					padding: 0;
+					float: left;
+					color: #4c4c4c;
+					font: 14px "Myriad Web Pro";
+					width: 100%;
+					text-align: center;
+				}
+				.social-icon-container {
+					display: none;
+					float: left;
+					width: 100%;
+					padding: 0;
+					margin: 0;
+					a {
+						&:first-child {
+							margin-left: 150px;
+						}
+					}
+					img {
+						margin: 0;
+						padding: 0;
+						width: 40px;
+					}
 				}
 			}
 		}
