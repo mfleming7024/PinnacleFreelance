@@ -8,35 +8,45 @@
     <script src="js/less-1.6.1.min.js"></script>
 </head>
 <body>
-	<nav>
-		<img src="img/logo.png" alt="Pinnacle Logo" />	 
-		<ul>
-			<li><a href="#" class="active">HOME</a></li>
-			<li><a href="#">TESTING<img src="img/dd-indicator.png" /></a></li>
-			<li><a href="#">COMPANY<img src="img/dd-indicator.png" /></a></li>
-			<li><a href="#">CONTACT US</a></li>
-			<li><a href="#">RESULTS</a></li>
-		</ul>
-	</nav>
-    <div id="cta">
-		<img src="img/cta-bg.jpg" />
-		<div class="overlay">
-			<h1>WHY CHOOSE US?</h1>
-			<p>We constantly set the industry standards for diagnostic and drug testing.  Our services are based on the latest data, research, and science.  Technological innovation is continuous in our industry, and we are dedicated to staying up-to-date with current products and services in the field of laboratory testing.  Our commitment to providing excellent services to physicians and their patients is unswerving and abiding.</p>
-		</div>
-    </div>
 	<div class="container">
+		<div class="row">
+			<div class="twelve columns">
+				<nav class="regular responsive">
+					<div class="hidden">
+						<img src="img/logo.png" id="hidden-logo" />
+						<a href="#" id="menu"><img src="img/menu-expand.png" /></a>
+					</div>
+					<ul>
+						<li><a href="#"><img src="img/logo.png" id="header-logo" /></a></li>
+						<li><a href="#" class="active">HOME</a></li>
+						<li><a href="#">TESTING<img src="img/dd-indicator.png" /></a></li>
+						<li><a href="#">COMPANY<img src="img/dd-indicator.png" /></a></li>
+						<li><a href="#">CONTACT US</a></li>
+						<li><a href="#">RESULTS<img src="img/dd-indicator.png" /></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<div class="row">
+			<div class="twelve columns" id="cta">
+				<img src="img/cta-bg.jpg" />
+				<div class="overlay">
+					<h1>WHY CHOOSE US?</h1>
+					<p>We constantly set the industry standards for diagnostic and drug testing.  Our services are based on the latest data, research, and science.  Technological innovation is continuous in our industry, and we are dedicated to staying up-to-date with current products and services in the field of laboratory testing.  Our commitment to providing excellent services to physicians and their patients is unswerving and abiding.</p>
+				</div>
+			</div>
+		</div>
 		<div class="row">
 			<div class="eight columns" id="general-info">
 				<div>
+					<img src="img/general-info-1.jpg" />
 					<h2>What we do?</h2>
-					<img src="" />
-					<p>At Pinnacle Laboratory Services, we provide pain management, script compliance services, and a plethora of diagnostic and drug tests.  Instead of using a cookie-cutter approach to diagnostics, physicians have the freedom to choose from a list of specific drug panels or create a custom panel that is specific to their practice and treatment protocols.</p>
+					<p>At Pinnacle Laboratory Services, we provide pain management, script compliance services, and a plethora of diagnostic and drug tests.  Instead of using a cookie-cutter approach to diagnostics, physicians have the <span class="bolder">freedom</span> to choose from a list of specific drug panels or create a <span class="bolder">custom panel</span> that is specific to their practice and treatment protocols.</p>
 				</div>
 				<div>
+					<img src="img/general-info-2.jpg" />
 					<h2>Our approach</h2>
-					<img src="" />
-					<p>As a high complexity-testing laboratory, we are able to rely on cutting edge methodologies and state of the art LC-MS/MS technologies that are not available to other testing laboratories.  We provide physicians and medical professionals with individualized services, tools, and data to improve their patients’ treatment plans.</p>
+					<p>As a high complexity-testing laboratory, we are able to rely on <span class="bolder">cutting edge</span> methodologies and <span class="bolder">state of the art</span> LC-MS/MS technologies that are not available to other testing laboratories.  We provide physicians and medical professionals with individualized services, tools, and data to improve their patients’ treatment plans.</p>
 				</div>
 			</div>
 			<div class="four columns" id="news-feed">
@@ -98,9 +108,27 @@
 				</div>
 			</div>
 		</div>
+		<footer>
+			<div class="upper-footer">
+				<ul>
+					<li><a href="#" class="active">HOME</a></li>
+					<li><a href="#">URINE TESTING</a></li>
+					<li><a href="#">ORAL FLUID TESTING</a></li>
+					<li><a href="#">PHARMACOGENETIC TESTING</a></li>
+					<li><a href="#">COMPANY</a></li>
+					<li><a href="#">CONTACT US</a></li>
+				</ul>
+			</div>
+			<div class="lower-footer">
+				<p>All rights reserved 2014 | Pinnacle Laboratory Services</p>
+				<div class="social-icon-container">
+					<a href="#"><img src="img/facebook-icon.png" /></a>
+					<a href="#"><img src="img/twitter-icon.png" /></a>
+					<a href="#"><img src="img/googleplus-icon.png" /></a>
+				</div>
+			</div>
+		</footer>
 	</div>
-    
-	
     <!-- Javascript -->
     <script src="js/jquery-2.1.0.min.js"></script>
     <script src="js/scripts.js"></script>

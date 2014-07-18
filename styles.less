@@ -5,7 +5,7 @@
 @import "flatui/color.less";
 @import "flatui/mixin.less";
 @import "flatui/form.less";
-//@import "flatui/nav.less";
+@import "flatui/nav.less";
 //@import "flatui/font.less";
 
 
@@ -16,53 +16,10 @@
 /* #Regular Code
 ================================================== */
 body {
-	margin: 10px auto;
-	width: 960px;
-	nav {
-		.size(100%, 65px);
-		border-bottom: 8px solid @green;
-		img {
-			float: left;
-			margin-left: 10px;
-			.size(206px, 50px);
-		}
-		ul {
-			float: right;
-			height: 100%;
-			list-style-type: none;
-			li {
-				float: left;
-				height: 100%;
-				padding: 0 18px;
-				&:last-child {
-					padding-right: 0;
-				}
-				a {
-					display: block;
-					margin: 25px 0 0;
-					text-decoration: none;
-					color: #514f4f;
-					font: 17px "Myriad Web Pro";
-					.transition(all, 0.2s, linear);
-					&.active {
-						color: @green;
-					}
-					&:hover {
-						color: @green;
-					}
-					img {
-						margin: 9px 0 0 5px;
-						float: right;
-						.size(9px, 6px);
-					}
-				}
-			}
-		}
-	}
 	#cta {
-		height: 337px;
 		position: relative;
 		border-bottom: 5px solid @lightgreen;
+		overflow: hidden;
 		img {
 			float: left;
 			width: 100%;
@@ -89,14 +46,22 @@ body {
 	//What we do/ Our approach
 	#general-info {
 		div {
+			overflow: hidden;
+			margin-bottom: 40px;
 			h2 {
 				font: 26px "NexaBold";
+				margin: -33px 0 0 8px;
 			}
 			img {
-				
+				//position: absolute;
 			}
 			p {
+				margin-top: 20px;
 				font: 14px "Myriad Web Pro";
+				line-height: 20px;
+			}
+			.bolder {
+				font-weight: bold;
 			}
 		}
 	}
@@ -120,10 +85,10 @@ body {
 			}
 		}
 		.news-item {
-			margin: 5px auto;
+			margin: 5px auto 10px;
 			overflow: hidden;
 			border-bottom: 3px solid @green;
-			width: 286px;
+			width: 94%;
 			h3 {
 				float: left;
 				font: 16px "Myriad Web Pro";
@@ -143,7 +108,7 @@ body {
 			}
 			button {
 				float: right;
-				margin: 4px 0;
+				margin: 5px 0;
 				border-bottom: 3px solid darken(@darkgreen, 20%);
 			}
 		}
@@ -186,7 +151,163 @@ body {
 			}
 		}
 	}
+	footer {
+		margin-top: 80px;
+		.upper-footer {
+			height: 45px;
+			background-color: #2c2c2c;
+			ul {
+				margin: 0 auto;
+				width: 625px;
+				list-style-type: none;
+				li {
+					float: left;
+					margin-top: 18px;
+					font: 12px "Myriad Web Pro";
+					padding: 0 10px;
+					a {
+						text-decoration: none;
+						display: block;
+						color: #b6b6b6;
+						.transition(all, 0.2s, linear);
+						&.active {
+							color: @green;
+						}
+						&:hover {
+							color: @green;
+						}
+					}
+				}
+			}
+		}
+		.lower-footer {
+			height: 30px;
+			background-color: #171717;
+			p {
+				float: left;
+				color: #4c4c4c;
+				font: 10px "Myriad Web Pro";
+				width: 50%;
+				text-align: right;
+				padding-top: 10px;
+				padding-right: 76px;
+			}
+			.social-icon-container {
+				float: left;
+				width: 50%;
+				padding-top: 5px;
+				padding-left: 230px;
+				img {
+					&:first-child {
+						
+					}
+				}
+			}
+		}
+	}
 } 
+
+
+/* #Tablet (Portrait)
+================================================== */
+
+/* Note: Design for a width of 768px 
+******************************
+12 Column
+((768/12) - 20) = 44
+*****************************/
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+	body {
+		#trait-container {
+			.trait {
+				.image-container {
+					.accent {
+						width: 60px;
+						top: -3px;
+						left: -16px;
+					}
+					.picture {
+						padding: 0 6px;
+					}
+				}
+			}
+		}
+	}
+}
+
+/*  #Mobile (Portrait)
+================================================== */
+
+/* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+	body {
+		#cta {
+			margin-left: 0;
+			img {
+				height: 240px;
+			}
+			.overlay {
+				width: 100%;
+				margin-left: 0;
+				padding: 5px;
+				h1 {
+					font-size: 26px;
+				}
+				p {
+					font-size: 14px;
+					line-height: 18px;
+				}
+			}
+		}
+		#general-info {
+			div {
+				img {
+					
+				}
+				h2 {
+					
+				}
+				p {
+					padding: 5px;
+					font-size : 15px;
+					line-height: 23px;
+				}
+			}
+		}
+		#trait-container {
+			.trait {
+				margin-bottom: 30px;
+				.image-container {
+					.accent {
+						width: 80px;
+						top: -4px;
+						left: 62px;
+					}
+					.picture {
+						padding: 0 92px;
+					}
+				}
+				p {
+					padding: 5px;
+					font-size: 15px;
+					line-height: 23px;
+				}
+			}
+		}
+	}
+}
+
+
+/* #Mobile (Landscape)
+================================================== */
+
+/* Note: Design for a width of 480px */
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	
+}
+
+
+
 
 
 
