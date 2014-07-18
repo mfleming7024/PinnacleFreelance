@@ -1,10 +1,10 @@
 /* #Imports
 ================================================== */
 @import "flatui/reset.less";
-@import "flatui/grid.less";
+//@import "flatui/grid.less";
 @import "flatui/color.less";
 @import "flatui/mixin.less";
-@import "flatui/form.less";
+//@import "flatui/form.less";
 //@import "flatui/nav.less";
 //@import "flatui/font.less";
 
@@ -16,10 +16,85 @@
 /* #Regular Code
 ================================================== */
 body {
-    h1 {
-        font: 36px "Corbel";
-		color: white;
-        margin-top: 5px;
-    }   
+	margin: 5px auto;
+	width: 960px;
+	nav {
+		.size(100%, 65px);
+		border-bottom: 5px solid @green;
+		img {
+			float: left;
+			margin-left: 10px;
+			.size(206px, 50px);
+		}
+		ul {
+			float: right;
+			height: 100%;
+			list-style-type: none;
+			li {
+				float: left;
+				height: 100%;
+				padding: 0 18px;
+				&:last-child {
+					padding-right: 0;
+				}
+				a {
+					display: block;
+					margin: 25px 0 0;
+					text-decoration: none;
+					color: #514f4f;
+					font: 17px "Myriad Web Pro";
+					.transition(all, 0.2s, linear);
+					&.active {
+						color: @green;
+					}
+					&:hover {
+						color: @green;
+					}
+					img {
+						margin: 9px 0 0 5px;
+						float: right;
+						.size(9px, 6px);
+					}
+				}
+			}
+		}
+	}
+	#cta {
+		height: 335px;
+		position: relative;
+		border-bottom: 4px solid @green;
+		img {
+			float: left;
+			width: 100%;
+		}
+		.overlay{
+			position: absolute;
+			top: 37px;
+			float: left;
+			margin-left: 10px;
+			.size(463px, 193px);
+			background-color: rgba(0,0,0,0.5);
+			color: white;
+			h1 {
+				padding-left: 5px;
+				//font: 
+			}
+			p {
+				padding-left: 5px;
+				font: 14px "Myriad Web Pro";
+				line-height: 24px;
+			}
+		}
+	}
 } 
+
+
+
+
+
+
+
+
+
+
 
