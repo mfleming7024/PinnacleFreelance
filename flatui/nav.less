@@ -34,11 +34,47 @@
             }
         }
     }
-    & > ul {
-        overflow: hidden;
+    ul {
+        overflow: visible;
         list-style-type: none;
         display: block;
 		.size(100%, 100%);
+		ul {
+			z-index: 2;
+			display: none;
+			li {
+				position: relative;
+				overflow: visible;
+				float: left;
+				width: 100%;
+				&:nth-child(2) {
+					margin-left: 0;
+				}
+			}
+		}
+		li:hover > ul {
+			display: block;
+			position: absolute;
+			top: 45px;
+			background: @darkgreen;
+			border: 1px solid @green;
+			.border-radius(5px);
+			.size(300px, auto);
+			&#results {
+				right: 0;
+			}
+			li {
+				.transition(all, 0.3s);
+				padding: 0;
+				margin: 0;
+				a {
+					color: @lightgreen;
+				}
+				&:hover {
+					background-color: @green;
+				}
+			}
+		}
         li {
             cursor: pointer;
             float: left;
@@ -46,54 +82,11 @@
             line-height: 46px;
             text-align: center;
 			overflow: hidden;
-			z-index: 4;
 			&:last-child {
 				padding-right: 0;
 			}
 			&:nth-child(2) {
 				margin-left: 150px;
-			}
-			&:hover + ul {
-				display: block;
-			}
-			& + ul {
-				display: none;
-				width: 300px;
-				height: auto;
-				background: white;
-				border: 1px solid @green;
-				position: absolute;
-				&#testing {
-					top: 40px;
-					right: 380px;
-					li {
-						.size(100%, auto);
-						&:nth-child(2) {
-							margin-left: 0;
-						}
-					}
-				}
-				&#company {
-					top: 65px;
-					left: 400px;
-					li {
-						.size(100%, auto);
-						&:nth-child(2) {
-							margin-left: 0;
-						}
-					}
-				}
-				&#results {
-					top: 65px;
-					right: 0;
-					li {
-						.size(100%, auto);
-						&:nth-child(2) {
-							margin-left: 0;
-						}
-					}
-				}
-				overflow: hidden;
 			}
             a {
                 display: block;
@@ -116,22 +109,6 @@
                     color: @green;
                 }
             }
-			
-//			#nav li:hover ul { 
-//				left:0;
-//				
-//			}
-//			#nav li:hover a { 
-//				background:#6b0c36;
-//				text-decoration:underline;
-//			}
-//			#nav li:hover ul a{ 
-//				text-decoration:none;
-//			}
-//			#nav li:hover ul li a:hover{ 
-//				background:#333;
-//			}
-			
         }
     }
 }

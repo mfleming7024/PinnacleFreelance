@@ -224,6 +224,26 @@ body {
 *****************************/
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	body {
+		ul {
+			ul {
+				li {
+					position: relative;
+					overflow: visible;
+					float: left;
+					width: 100%;
+				}
+			}
+			li:hover > ul {
+				top: 50px;
+				.size(100px, auto);
+				&#company {
+					right: 0;
+				}
+				li {
+					font-size: 14px;
+				}
+			}
+		}
 		#trait-container {
 			.trait {
 				.image-container {
