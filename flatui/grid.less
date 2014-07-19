@@ -79,6 +79,10 @@ hr.twelve.columns {
     margin-bottom: 8px;
 }
 
+.show-for-mobile {
+	display: none;
+}
+
 .lightened {
     color: #bdc3c7;
 }
@@ -280,6 +284,9 @@ or wrap each row of columns in a <div class="row"> */
         .container .two-thirds.column,
         .container .one-quarter.column,
         .container .three-quarters.column  { width: 100%; }
+		.hide-for-mobile {
+            display: none !important;
+        }
 
     }
 
@@ -288,7 +295,7 @@ or wrap each row of columns in a <div class="row"> */
 
     /* Note: Design for a width of 768px */
     @media only screen and (min-width: 768px) and (max-width: 959px) {
-    
+		
     }
     
 /* #Mobile (Portrait)
@@ -296,8 +303,11 @@ or wrap each row of columns in a <div class="row"> */
 
     /* Note: Design for a width of 320px */
     @media only screen and (max-width: 767px) {
-        .hide_for_mobile {
-            display: none;
+		.show-for-mobile {
+			display: block;
+		}
+		.hide-for-mobile {
+            display: none !important;
         }
     }
 
