@@ -6,7 +6,7 @@
     font: 17px "Myriad Web Pro";
 	border-bottom: 8px solid @green;
     position: relative;
-    overflow: hidden;
+    overflow: visible;
 	.size(100%, 65px);
 	float: right;
     .hidden {
@@ -45,17 +45,55 @@
             padding: 0 16px;
             line-height: 46px;
             text-align: center;
+			overflow: hidden;
+			z-index: 4;
 			&:last-child {
 				padding-right: 0;
 			}
 			&:nth-child(2) {
 				margin-left: 150px;
 			}
+			&:hover + ul {
+				display: block;
+			}
 			& + ul {
-				display: none !important;
-//				li {
-//					display: none;
-//				}
+				display: none;
+				width: 300px;
+				height: auto;
+				background: white;
+				border: 1px solid @green;
+				position: absolute;
+				&#testing {
+					top: 40px;
+					right: 380px;
+					li {
+						.size(100%, auto);
+						&:nth-child(2) {
+							margin-left: 0;
+						}
+					}
+				}
+				&#company {
+					top: 65px;
+					left: 400px;
+					li {
+						.size(100%, auto);
+						&:nth-child(2) {
+							margin-left: 0;
+						}
+					}
+				}
+				&#results {
+					top: 65px;
+					right: 0;
+					li {
+						.size(100%, auto);
+						&:nth-child(2) {
+							margin-left: 0;
+						}
+					}
+				}
+				overflow: hidden;
 			}
             a {
                 display: block;
@@ -134,6 +172,9 @@ nav.regular {
 					}
 				}
             }
+			& > ul {
+				display: block !important;
+			}
         }
     }
     
