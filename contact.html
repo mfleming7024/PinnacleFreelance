@@ -62,35 +62,33 @@
 			<div class="eight columns" id="contact-form">
 				<h1>WE NEED YOUR INFO</h1>
 				<hr />
-				<form method="post" action="php/email.php">
-					<div class="row">
-						<div class="form-input-half left">
-							<label for="contactName">Your Name*</label>
-							<input type="text" name="contactName" id="contactName" />
-						</div>
-						<div class="form-input-half right">
-							<label for="companyName">Your Companys Name*</label>
-							<input type="text" name="companyName" id="companyName" />
-						</div>
+				<div class="row">
+					<div class="form-input-half left">
+						<label for="contactName">Your Name*</label>
+						<input type="text" name="contactName" id="name" />
 					</div>
-					<div class="row">
-						<div class="form-input-half left">
-							<label for="contactName">Your Email*</label>
-							<input type="email" name="contactName" id="contactName" />
-						</div>
-						<div class="form-input-half right">
-							<label for="companyName">Your Phone Number*</label>
-							<input type="tel" name="companyName" id="companyName" />
-						</div>
+					<div class="form-input-half right">
+						<label for="companyName">Your Companys Name*</label>
+						<input type="text" name="companyName" id="companyName" />
 					</div>
-					<div class="row">
-						<div class="form-input-full">
-							<label for="contactMessage">Your Message*</label>
-							<textarea name="contactMessage" id="contactMessage"></textarea>
-						</div>
+				</div>
+				<div class="row">
+					<div class="form-input-half left">
+						<label for="contactName">Your Email*</label>
+						<input type="email" name="contactEmail" id="email" />
 					</div>
-					<button type="submit">EMAIL US <img src="img/email-arrow-icon.png" /></button>
-				</form>
+					<div class="form-input-half right">
+						<label for="companyName">Your Phone Number*</label>
+						<input type="tel" name="companyName" id="phoneNumber" />
+					</div>
+				</div>
+				<div class="row">
+					<div class="form-input-full">
+						<label for="contactMessage">Your Message*</label>
+						<textarea name="contactMessage" id="message"></textarea>
+					</div>
+				</div>
+				<button id="emailButton">EMAIL US <img src="img/email-arrow-icon.png" /></button>
 			</div>
 			<div class="four columns" id="contact-us">
 				<h2>CONTACT US</h2>

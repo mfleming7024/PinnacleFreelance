@@ -13,4 +13,23 @@ $("nav.responsive .hidden a#menu").on("click", function(e){
     } else {
         menu.css("display", "none");
     }
-})
+});
+
+$('#emailButton').click(function(){
+	var from, company, phone, message, subject;
+	
+	from = $("#name").val();
+	company = $("#companyName").val();
+	phone = $("#phoneNumber").val();
+	message = $("#message").val();
+	
+	subject = from + " , " + company + " , " + phone;
+	
+	console.log(subject);
+	
+    $(location).attr('href', 'mailto:mfleming7024@gmail.com?subject='
+                             + encodeURIComponent(subject)
+                             + "&body=" 
+                             + encodeURIComponent(message)
+    );
+});
