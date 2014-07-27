@@ -424,6 +424,81 @@ body {
 			}
 		}
 	}
+	//News page
+	#newspage-container {
+		margin-top: 15px;
+		border: 1px solid @green;
+		padding: 10px;
+		.news-item {
+			padding-bottom: 20px;
+			overflow: hidden;
+			border-bottom: 2px solid @darkgreen;
+			margin-top: 20px;
+			h2 {
+				padding: 0 5px;
+				font: 24px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				font-weight: bold;
+				float: left;
+			}
+			h3 {
+				padding: 0 5px;
+				font: 18px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				font-style: italic;
+				color: #cacaca;
+				float: right;
+				margin: 5px 10px 0 0;
+			}
+			p {
+				padding: 0 5px;
+				margin-top: 15px;
+				float: left;
+				font: 14px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				color: #999999;
+				line-height: 17px;
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	#jump-to {
+		margin-top: 15px;
+		border: 1px solid @green;
+		h2 {
+			font: 22px "NexaBold";
+			color: #ffffff;
+			padding: 8px 0 4px 5px;
+			background-image: url("img/newsfeed-header-bg.png");
+		}
+		div {
+			height: 50px;
+			padding: 5px;
+			overflow: hidden;
+			a {
+				display: block;
+				.size(100%, 100%);
+				h3 {
+					float: left;
+					width: 80%;
+					font: 20px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+					color: #666666;
+				}
+				img {
+					float: right;
+					margin: 18px 10px 0 0;
+				}
+			}
+			h3 {
+				margin: 12px 0 0 8px;
+				float: left;
+				font: 15px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				color: #666666;
+			}
+			&:nth-child(even) {
+				background: @lightgreen;
+			}
+		}
+	}
 } 
 
 
