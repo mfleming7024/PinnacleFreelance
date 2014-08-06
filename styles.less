@@ -479,6 +479,9 @@ body {
 				color: #999999;
 				line-height: 20px;
 				text-indent: 25px;
+				&.no-indent {
+					text-indent: 0;
+				}
 			}
 			&:first-child {
 				margin-top: 0;
@@ -505,7 +508,7 @@ body {
 					float: left;
 					margin: 12px 0 0 8px;
 					width: 80%;
-					font: 20px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+					font: 16px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 					color: #666666;
 				}
 				img {
@@ -671,6 +674,8 @@ body {
 			.overlay {
 				width: 100%;
 				margin-left: 0;
+				height: auto;
+				//here
 				padding: 5px;
 				h1 {
 					font-size: 26px;
