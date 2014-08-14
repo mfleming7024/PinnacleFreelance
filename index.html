@@ -3,13 +3,17 @@
 <head>
     <meta charset="utf-8">
     <title>Pinnacle Pharmacology</title>
-    <link type="text/css" rel="stylesheet/less" href="styles.less" />
+<!--    <link type="text/css" rel="stylesheet/less" href="styles.less" />-->
+	<link rel="stylesheet" href="styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no" />
-    <script src="js/less-1.6.1.min.js"></script>
+	<meta name="description" content="At Pinnacle Laboratory Services, we specialize in Pharmacogenetic testing as well as Urine and Saliva Toxicology.">
+	<meta name="keywords" content="Pharmacogenetic testing, Genetic testing, DNA testing, Toxicology Testing, Drug testing, Personalized Medicine">
+	<link rel="icon" type="image/png" href="favicon.png" />
+<!--    <script src="js/less-1.6.1.min.js"></script>-->
 </head>
 <body>
 	<div class="container">
-		<div class="row">
+		<div class="row" id="nav-container">
 			<div class="twelve columns">
 				<nav class="regular responsive">
 					<div class="hidden">
@@ -19,20 +23,43 @@
 					<ul>
 						<li><a href="#"><img src="img/logo.png" id="header-logo" /></a></li>
 						<li><a href="#" class="active">HOME</a></li>
-						<li><a href="#">TESTING<img src="img/dd-indicator.png" /></a></li>
-						<li><a href="#">COMPANY<img src="img/dd-indicator.png" /></a></li>
-						<li><a href="#">CONTACT US</a></li>
-						<li><a href="#">RESULTS<img src="img/dd-indicator.png" /></a></li>
+						<li class="hide-for-mobile"><a href="#">TESTING<img src="img/dd-indicator.png" /></a>
+							<ul id="testing" class="hide-for-mobile">
+								<li><a href="urine-testing.html">URINE TESTING</a></li>
+								<li><a href="oral-testing.html">ORAL FLUID TESTING</a></li>
+								<li><a href="pharm-testing.html">PHARMACOGENETIC TESTING</a></li>
+							</ul>
+						</li>
+						<li class="show-for-mobile"><a href="urine-testing.html">URINE TESTING</a></li>
+						<li class="show-for-mobile"><a href="oral-testing.html">ORAL FLUID TESTING</a></li>
+						<li class="show-for-mobile"><a href="pharm-testing.html">PHARMACOGENETIC TESTING</a></li>
+						<li class="hide-for-mobile"><a href="#">COMPANY<img src="img/dd-indicator.png" /></a>
+							<ul id="company" class="hide-for-mobile">
+								<li><a href="drtrescot.html">MEDICAL DIRECTOR DR. TRESCOT</a></li>
+								<li><a href="staff.html">JOIN THE TEAM</a></li>
+							</ul>
+						</li>
+						<li class="show-for-mobile"><a href="drtrescot.html">MEDICAL DIRECTOR DR. TRESCOT</a></li>
+						<li class="show-for-mobile"><a href="staff.html">JOIN THE TEAM</a></li>
+						<li><a href="contact.html">CONTACT US</a></li>
+						<li class="hide-for-mobile"><a href="#">RESULTS<img src="img/dd-indicator.png" /></a>
+							<ul id="results" class="hide-for-mobile">
+								<li><a href="https://pinnacle.labsvc.net/index.cgi" target="_blank">TOXICOLOGY RESULTS</a></li>
+								<li><a href="https://portal.pinnaclelabservices.com" target="_blank">PHARMACOGENETIC RESULTS</a></li>
+							</ul>
+						</li>
+						<li class="show-for-mobile"><a href="https://pinnacle.labsvc.net/index.cgi" target="_blank">TOXICOLOGY RESULTS</a></li>
+						<li class="show-for-mobile"><a href="https://portal.pinnaclelabservices.com" target="_blank">PHARMACOGENETIC RESULTS</a></li>
 					</ul>
 				</nav>
 			</div>
 		</div>
-		<div class="row">
+		<div class="row" id="cta-container">
 			<div class="twelve columns" id="cta">
-				<img src="img/cta-bg.jpg" />
+				<img src="img/cta-bg.jpg" class="large-container" />
 				<div class="overlay">
 					<h1>WHY CHOOSE US?</h1>
-					<p>We constantly set the industry standards for diagnostic and drug testing.  Our services are based on the latest data, research, and science.  Technological innovation is continuous in our industry, and we are dedicated to staying up-to-date with current products and services in the field of laboratory testing.  Our commitment to providing excellent services to physicians and their patients is unswerving and abiding.</p>
+					<p>We constantly set the standards for Pharmacogenetic &amp; Toxicology drug testing. Our services are based on the latest data, research, and science.  Technological innovation is continuous in our industry, and we are dedicated to staying up-to-date with current products and services in the field of laboratory testing.  Our commitment to providing excellent services to physicians and their patients is unswerving and abiding.</p>
 				</div>
 			</div>
 		</div>
@@ -41,7 +68,7 @@
 				<div>
 					<img src="img/general-info-1.jpg" />
 					<h2>What we do?</h2>
-					<p>At Pinnacle Laboratory Services, we provide pain management, script compliance services, and a plethora of diagnostic and drug tests.  Instead of using a cookie-cutter approach to diagnostics, physicians have the <span class="bolder">freedom</span> to choose from a list of specific drug panels or create a <span class="bolder">custom panel</span> that is specific to their practice and treatment protocols.</p>
+					<p>At Pinnacle Laboratory Services, we specialize in Pharmacogenetic &amp; Toxicology drug testing. Instead of using a cookie-cutter approach to diagnostics, physicians have the <span class="bolder">freedom</span> to choose from a list of specific drug panels or create a <span class="bolder">custom panel</span> that is specific to their practice and treatment protocols.</p>
 				</div>
 				<div>
 					<img src="img/general-info-2.jpg" />
@@ -55,22 +82,23 @@
 					<img src="img/calendar-icon.png" />
 				</div>
 				<div class="news-item">
-					<h3>New Launch!</h3>
-					<h4>04/09/2014</h4>
-					<p>Pinnacle Laboratory Services successfully launches Pharmacogenetic Testing. Doctors use the patient’s genetic information to personalize medicine.</p>
-					<button class="success rounded">Read More</button>
+					<h3>Medical Media USA Partnership</h3>
+					<h4>08/06/2014</h4>
+					<p>Medical Media USA, Inc.  is pleased to announce a strategic advertising partnership with Pinnacle Laboratory Services of Ocala, FL.</p>
+					<a href="news.html#medical-media-partnership"><button class="success rounded">Read More</button></a>
 				</div>
+				<div class="news-item">
+					<h3>Pinnacle Launches PGx</h3>
+					<h4>08/04/2014</h4>
+					<p>Pinnacle Laboratory Services successfully launches Pharmacogenetic Testing. Doctors use the patient’s genetic information to personalize medicine.</p>
+					<a href="news.html#launch-speech"><button class="success rounded">Read More</button></a>
+				</div>
+
 				<div class="news-item">
 					<h3>Dr. Andrea Speech</h3>
-					<h4>04/07/2014</h4>
+					<h4>08/03/2014</h4>
 					<p>Dr. Andrea Trescot talks about the importance of PHARMACOGENETIC TESTING at the FSIPP Conference (Florida Society of Interventional Pain Physicians)</p>
-					<button class="success rounded">Read More</button>
-				</div>
-				<div class="news-item">
-					<h3>Welcome to the Feed!</h3>
-					<h4>04/04/2014</h4>
-					<p>Here you can keep up to date with all of our recent events in just one glance. Everything we do will be posted here on a daily basis for an overview of what has been happening recently.</p>
-					<button class="success rounded">Read More</button>
+					<a href="news.html#trescot-speech"><button class="success rounded">Read More</button></a>
 				</div>
 			</div>
 		</div>
@@ -84,7 +112,7 @@
 					<div class="trait-title">
 						<h2><img src="img/logo-mini-icon.gif" />Selectivity</h2>
 					</div>
-					<p>False positives /negatives and possible interference from masking agents are virtually eliminated, making sure you get the</p>
+					<p>False positives /negatives and possible interference from masking agents are virtually eliminated, making sure you get the right results the first time – every time.</p>
 				</div>
 				<div class="four columns trait">
 					<div class="image-container">
@@ -104,7 +132,7 @@
 					<div class="trait-title">
 						<h2><img src="img/logo-mini-icon.gif" />Speed</h2>
 					</div>
-					<p>We understand that every second counts in the medical field. We provide rapid analysis with next-day access</p>
+					<p>We understand that every second counts in the medical field. We provide rapid analysis with next-day access to patient data.</p>
 				</div>
 			</div>
 		</div>
@@ -112,11 +140,11 @@
 			<div class="upper-footer">
 				<ul>
 					<li><a href="#" class="active">HOME</a></li>
-					<li><a href="#">URINE TESTING</a></li>
-					<li><a href="#">ORAL FLUID TESTING</a></li>
-					<li><a href="#">PHARMACOGENETIC TESTING</a></li>
-					<li><a href="#">COMPANY</a></li>
-					<li><a href="#">CONTACT US</a></li>
+					<li><a href="urine-testing.html">URINE TESTING</a></li>
+					<li><a href="oral-testing.html">ORAL FLUID TESTING</a></li>
+					<li><a href="pharm-testing.html">PHARMACOGENETIC TESTING</a></li>
+					<li><a href="staff.html">COMPANY</a></li>
+					<li><a href="contact.html">CONTACT US</a></li>
 				</ul>
 			</div>
 			<div class="lower-footer">

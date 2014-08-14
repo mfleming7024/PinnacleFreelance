@@ -1,4 +1,4 @@
-/* #Imports
+ /* #Imports
 ================================================== */
 @import "flatui/reset.less";
 @import "flatui/grid.less";
@@ -6,17 +6,26 @@
 @import "flatui/mixin.less";
 @import "flatui/form.less";
 @import "flatui/nav.less";
-//@import "flatui/font.less";
-
 
 /* #Import a font
 ================================================== */
-.font-face("NexaBold", "fonts/NexaBold.ttf.eot");
+@font-face {
+    font-family: 'NexaBold';
+    src:url('fonts/NexaBold.ttf.woff') format('woff'),
+        url('fonts/NexaBold.ttf.svg#NexaBold') format('svg'),
+        url('fonts/NexaBold.ttf.eot'),
+        url('fonts/NexaBold.ttf.eot?#iefix') format('embedded-opentype'); 
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* #Regular Code
 ================================================== */
 body {
+	#nav-container {margin-bottom: 0;}
+	#cta-container {margin-top: 0;}
 	#cta {
+		margin-top: 0;
 		position: relative;
 		border-bottom: 5px solid @lightgreen;
 		overflow: hidden;
@@ -38,8 +47,20 @@ body {
 			}
 			p {
 				margin: 5px 0 0 3px;
-				font: 14px "Myriad Web Pro";
+				font: 14px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 				line-height: 23px;
+			}
+		}
+		.secondary-overlay {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			background-color: rgba(0,0,0,0.5);
+			color: white;
+			h1 {
+				padding: 10px;
+				font: 36px "NexaBold";
 			}
 		}
 	}
@@ -57,7 +78,7 @@ body {
 			}
 			p {
 				margin-top: 20px;
-				font: 14px "Myriad Web Pro";
+				font: 14px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 				line-height: 20px;
 			}
 			.bolder {
@@ -71,7 +92,7 @@ body {
 		border-right: 1px solid @lightgreen;
 		border-bottom: 1px solid @lightgreen;
 		#news-header {
-			background-image: url("img/newsfeed-bg.png");
+			background-image: url("img/newsfeed-header-bg.png");
 			.size(100%, 38px);
 			h2 {
 				float: left;
@@ -91,19 +112,19 @@ body {
 			width: 94%;
 			h3 {
 				float: left;
-				font: 16px "Myriad Web Pro";
+				font: 16px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 				font-weight: bold;
 			}
 			h4 {
 				float: right;
-				font: 14px "Myriad Web Pro";
+				font: 14px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 				font-style: italic;
 				color: #cacaca;
 			}
 			p {
 				float: left;
 				padding-top: 6px;
-				font: 13px "Myriad Web Pro";
+				font: 13px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 				color: #999999;
 			}
 			button {
@@ -137,7 +158,7 @@ body {
 				h2 {
 					width: 100%;
 					text-align: center;
-					font: 24px "Myriad Web Pro";
+					font: 24px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 				}
 			}
 			p{
@@ -145,7 +166,7 @@ body {
 				border-top: 3px solid @green;
 				margin-top: 5px;
 				padding-top: 2px;
-				font: 14px "Myriad Web Pro";
+				font: 14px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 				line-height: 20px;
 				color: #666666;
 			}
@@ -163,8 +184,12 @@ body {
 				li {
 					float: left;
 					margin-top: 18px;
-					font: 12px "Myriad Web Pro";
-					padding: 0 10px;
+					font: 12px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+					padding: 0 8px;
+					&:last-child {
+						padding-right: 0;
+						//for floating issues
+					}
 					a {
 						text-decoration: none;
 						display: block;
@@ -186,7 +211,7 @@ body {
 			p {
 				float: left;
 				color: #4c4c4c;
-				font: 10px "Myriad Web Pro";
+				font: 10px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 				width: 50%;
 				text-align: right;
 				padding-top: 10px;
@@ -197,11 +222,339 @@ body {
 				width: 50%;
 				padding-top: 5px;
 				padding-left: 230px;
-				img {
-					&:first-child {
-						
-					}
+			}
+		}
+	}
+	/*SECONDARY PAGES==========================*/
+	//Testing Pages
+	#testing-information {
+		margin-top: 20px;
+		position: relative;
+		img {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+		h2 {
+			float: left;
+			margin-top: 42px;
+			padding: 5px 3px 1px;
+			width: 100%;
+			background-color: @lightgreen;
+			font: 26px "NexaBold";
+		}
+		p {
+			float: left;
+			margin-top: 10px;
+			font: 18px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+			line-height: 26px;
+		}
+	}
+	#testing-features {
+		margin-top: 40px;
+		h2 {
+			width: 100%;
+			font: 26px "NexaBold";
+			color: white;
+			background-image: url("img/newsfeed-header-bg.png");
+			padding: 6px 0 0 4px;
+		}
+		ul {
+			width: 100%;
+			list-style-type: none;
+			border: 1px solid @green;
+			li{
+				padding: 5px 5px;
+				font: 16px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				line-height: 24px;
+				.bolder {
+					font-weight: bold;
+					font-size: 17px;
 				}
+				&:nth-child(even) {
+					background: @lightgreen;
+				}
+			}
+		}
+		//pharm page 
+		img {
+			width: 100%;
+			margin: 20px 0;
+		}
+		h3 {
+			font: 26px "NexaBold";
+		}
+		hr {
+			width: 100%;
+			height: 1px;
+			background-color: @green;
+		}
+	}
+	#testing-includes {
+		margin-top: 50px;
+		h2 {
+			width: 100%;
+			font: 26px "NexaBold";
+			color: black;
+		}
+		hr {
+			width: 100%;
+			height: 1px;
+			background-color: @green;
+		}
+		ul {
+			margin-top: 10px;
+			list-style-type: none;
+			li{
+				padding: 5px 5px;
+				font: 16px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+			}
+		}
+		video {
+			margin-top: 20px;
+			display: block;
+			width: 100%;
+			background: black;
+		}
+	}
+	//STAFF PAGE
+	#staff-profiles {
+		margin-top: 90px;
+		div {
+			h2 {
+				padding: 8px 0 3px 8px;
+				width: 100%;
+				background-image: url("img/newsfeed-header-bg.png");
+				font: 22px "NexaBold";
+				color: #ffffff;
+			}
+			img {
+				float: left;
+			}
+			h3 {
+				float: left;
+				padding: 8px 0 0 4px;
+				color: #514f4f;
+				font: 18px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+			}
+			p {
+				clear: left;
+				font: 14px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				line-height: 19px;
+				padding: 5px;
+			}
+		}
+	}
+	//CONTACT PAGE
+	#contact-form {
+		margin-top: 20px;
+		h1 {
+			font: 24px "NexaBold";
+			margin-bottom: 5px;
+		}
+		hr {
+			height: 1px;
+			background-color: @green;
+		}
+		button {
+			.size(210px, 60px);
+			float: right;
+			position: relative;
+			border: none;
+			background: @darkgreen;
+			cursor: pointer;
+			color: white;
+			font: 20px "NexaBold";
+			padding-top: 5px;
+			img {
+				display: block;
+				position: absolute;
+				top: 12px;
+				right: 10px;
+			}
+		}
+		.form-input-half {
+			float: left;
+			width: 48%;
+			label {
+				font: 14px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				font-weight: bold;
+				float: left;
+				width: 100%;
+				margin-bottom: 5px;
+			}
+			input {
+				float: left;
+				width: 100%;
+				height: 40px;
+				border: 1px solid @green;
+				.border-radius(5px);
+				font: 16px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+			}
+			&.left {
+				padding-right: 2%;
+			}
+			&.right {
+				float: right;
+			}
+		}
+		.form-input-full {
+			float: left;
+			width: 100%;
+			label {
+				font: 14px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				font-weight: bold;
+				float: left;
+				width: 100%;
+				margin-bottom: 5px;
+			}
+			textarea {
+				resize: none;
+				float: left;
+				width: 100%;
+				height: 100px;
+				border: 1px solid @green;
+				.border-radius(5px);
+				font: 16px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+			}
+		}
+	}
+	#contact-us {
+		margin-top: 15px;
+		border: 1px solid @green;
+		h2 {
+			font: 22px "NexaBold";
+			color: #ffffff;
+			padding: 8px 0 4px 5px;
+			background-image: url("img/newsfeed-header-bg.png");
+		}
+		div {
+			height: 50px;
+			padding: 5px;
+			overflow: hidden;
+			img {
+				float: left;
+				margin-top: 5px;
+			}
+			h3 {
+				margin: 12px 0 0 8px;
+				float: left;
+				font: 15px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				color: #666666;
+			}
+			&:nth-child(even) {
+				background: @lightgreen;
+			}
+		}
+	}
+	//News page
+	#newspage-container {
+		margin-top: 15px;
+		border: 1px solid @green;
+		padding: 10px;
+		.news-item {
+			padding-bottom: 20px;
+			overflow: hidden;
+			border-bottom: 2px solid @darkgreen;
+			margin-top: 20px;
+			h2 {
+				padding: 0 5px;
+				font: 24px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				font-weight: bold;
+				float: left;
+			}
+			h3 {
+				padding: 0 5px;
+				font: 18px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				font-style: italic;
+				color: #cacaca;
+				float: right;
+				margin: 5px 10px 0 0;
+			}
+			p {
+				padding: 0 5px;
+				margin-top: 15px;
+				float: left;
+				font: 14px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				color: #999999;
+				line-height: 20px;
+				text-indent: 25px;
+				&.no-indent {
+					text-indent: 0;
+				}
+			}
+			&:first-child {
+				margin-top: 0;
+			}
+		}
+	}
+	#jump-to {
+		margin-top: 15px;
+		border: 1px solid @green;
+		h2 {
+			font: 22px "NexaBold";
+			color: #ffffff;
+			padding: 8px 0 4px 5px;
+			background-image: url("img/newsfeed-header-bg.png");
+		}
+		div {
+			height: 50px;
+			padding: 5px;
+			overflow: hidden;
+			a {
+				display: block;
+				.size(100%, 100%);
+				h3 {
+					float: left;
+					margin: 12px 0 0 8px;
+					width: 80%;
+					font: 16px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+					color: #666666;
+				}
+				img {
+					float: right;
+					margin: 18px 10px 0 0;
+				}
+			}
+			&:nth-child(even) {
+				background: @lightgreen;
+			}
+		}
+	}
+	//DR TRESCOT
+	#dr-trescot-info {
+		border: 1px solid @green;
+		margin-top: 80px;
+		position: relative;
+		background: url("img/trescot-info-bg.png") left bottom no-repeat;
+		img {
+			position: absolute;
+			top: -60px;
+			left: -60px;
+		}
+		.trescot-info-container {
+			float: left;
+			margin-left: 130px;
+			h2 {
+				font: 32px "NexaBold";
+				color: #514f4f;
+				margin-top: 65px;
+				margin-bottom: 15px;
+				border-bottom: 1px solid @green;
+				display: block;
+				width: auto;
+			}
+			hr {
+				height: 1px; 
+				background-color: @green;
+				margin-right: 90px;
+			}
+			p {
+				margin: 45px 0;
+				font: 18px "Myriad Web Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+				color: #514f4f;
+				line-height: 24px;
+				padding-right: 10px;
 			}
 		}
 	}
@@ -218,6 +571,43 @@ body {
 *****************************/
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	body {
+		ul {
+			ul {
+				li {
+					position: relative;
+					overflow: visible;
+					float: left;
+					width: 100%;
+				}
+			}
+			li:hover > ul {
+				top: 50px;
+				.size(100px, auto);
+				&#company {
+					right: 0;
+				}
+				li {
+					font-size: 14px;
+				}
+			}
+		}
+		/*Secondary Pages==================================*/
+		#testing-information {
+			h2 {
+				font-size: 22px;
+				padding: 5px;
+			}
+		}
+		#news-feed {
+			div.news-item {
+				h3 {
+					font-size: 14px;
+				}
+				p {
+					line-height: 18px;
+				}
+			}
+		}
 		#trait-container {
 			.trait {
 				.image-container {
@@ -228,6 +618,44 @@ body {
 					}
 					.picture {
 						padding: 0 6px;
+					}
+				}
+			}
+		}
+		#staff-profiles {
+			margin-top: 90px;
+			div {
+				h2 {
+					font-size: 18px;
+				}
+				h3 {
+					padding: 8px 0 0 4px;
+					font-size: 14px;
+				}
+				img {
+					width: 65px;
+				}
+				p {
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+		}
+		#contact-us {
+			div {
+				h3 {
+					font-size: 12px;
+				}
+			}
+		}
+		#jump-to {
+			h2 {
+				font-size: 19px;
+			}
+			div {
+				a {
+					h3 {
+						font-size: 16px;
 					}
 				}
 			}
@@ -244,11 +672,17 @@ body {
 		#cta {
 			margin-left: 0;
 			img {
-				height: 240px;
+				height: auto;
+				max-width: 100%;
+				&.large-container {
+					height: 240px;
+				}
 			}
 			.overlay {
 				width: 100%;
+				bottom: 0;
 				margin-left: 0;
+				height: auto;
 				padding: 5px;
 				h1 {
 					font-size: 26px;
@@ -258,15 +692,14 @@ body {
 					line-height: 18px;
 				}
 			}
+			.secondary-overlay {
+				h1 {
+					font-size: 26px;
+				}
+			}
 		}
 		#general-info {
 			div {
-				img {
-					
-				}
-				h2 {
-					
-				}
 				p {
 					padding: 5px;
 					font-size : 15px;
@@ -284,13 +717,161 @@ body {
 						left: 62px;
 					}
 					.picture {
-						padding: 0 92px;
+						padding: 0;
+						margin: 0 0 0 92px;
 					}
 				}
 				p {
 					padding: 5px;
 					font-size: 15px;
 					line-height: 23px;
+				}
+			}
+		}
+		footer {
+			.upper-footer {
+				height: auto;
+				overflow: hidden;
+				ul {
+					width: 100%;
+					overflow: hidden;
+					li {
+						margin: 0;
+						padding: 0;
+						.size(100%, 45px);
+						border-bottom: 1px solid gray;
+						float: left;
+						line-height: 45px;
+						text-align: center;
+						a {
+							display: block;
+							.size(100%, 100%);
+							.transition(all, 0.5s, linear);
+							&.active {
+								color: @green;
+							}
+							&:hover {
+								background-color: #000000;
+								color: @green;
+							}
+						}
+					}
+				}
+			}
+			.lower-footer {
+				height: auto;
+				overflow: hidden;
+				p {
+					margin: 8px 0;
+					padding: 0;
+					float: left;
+					color: #4c4c4c;
+					width: 100%;
+					text-align: center;
+				}
+				.social-icon-container {
+					display: none;
+				}
+			}
+		}
+		/*Secondary Pages==================================*/
+		#testing-information {
+			img {
+				display: none;
+			}
+			h2 {
+				margin-top: 0px;
+				font-size: 22px;
+			}
+			p {
+				font-size: 16px;
+				line-height: 22px;
+				padding: 5px;
+			}
+		}
+		#testing-features {
+			ul {
+				li {
+					font-size: 14px;
+					line-height: 22px;
+				}
+			}
+		}
+		//STAFF PAGE
+		#staff-profiles {
+			div {
+				margin-top: 1em;
+				&:first-child {
+					margin-top: 0;
+				}
+				h2 {
+					font-size: 22px;
+				}
+				h3 {
+					font-size: 18px;
+				}
+				p {
+					font-size: 14px;
+					line-height: 19px;
+				}
+			}
+		}
+		#contact-form {
+			.form-input-half {
+				width: 100%;
+				label {
+					width: 98%;
+					padding-left: 2%;
+				}
+				input {
+					width: 96%;
+					margin: 0 2%;
+				}
+				&.left {
+					padding: 0;
+				}
+				&.right {
+					padding: 0;
+				}
+				&:nth-child(2) {
+					margin-top: 5px;
+				}
+			}
+			.form-input-full {
+				width: 96%;
+				margin: 0 2%;
+				label {
+					width: 100%;
+				}
+			}
+			button {
+				margin-right: 2%;
+			}
+		}
+		//TRESCOT PAGE
+		#dr-trescot-info {
+			margin-top: 100px;
+			img {
+				top: -100px;
+				width: 150px;
+				left: 28%;
+				right: 28%;
+				margin: 0 auto;
+			}
+			.trescot-info-container {
+				float: left;
+				margin-left: 0;
+				padding: 10px;
+				h2 {
+					font-size: 24px;
+					margin-top: 75px;
+					margin-bottom: 15px;
+					width: 100%;
+				}
+				p {
+					margin: 45px 0;
+					font-size: 16px;
+					line-height: 22px;
 				}
 			}
 		}
