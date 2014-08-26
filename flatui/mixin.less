@@ -1,0 +1,36 @@
+/* #Basic Size
+================================================== */
+.size(@width; @height) {
+    width:  @width;
+    height: @height;
+}
+
+/* #Border Radius
+================================================== */
+.border-radius (@radius: 5px) {
+	-webkit-border-radius:   @radius;
+	-moz-border-radius:      @radius;
+	border-radius:           @radius;
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+/* #Box Shadow
+================================================== */
+.box-shadow (@x: 0px, @y: 3px, @blur: 5px, @color: #333) {
+    -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @color);
+    -moz-box-shadow:    @x @y @blur rgba(0, 0, 0, @color);
+    box-shadow:         @x @y @blur rgba(0, 0, 0, @color);
+}
+
+
+/* #Animations
+================================================== */
+.transition (@prop: all, @time: 0.5s, @ease: linear) {
+    -webkit-transition: @prop @time @ease;
+    -moz-transition:    @prop @time @ease;
+    -o-transition:      @prop @time @ease;
+    -ms-transition:     @prop @time @ease;
+    transition:         @prop @time @ease;
+}

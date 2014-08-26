@@ -25,7 +25,7 @@ $('#emailButton').click(function(){
 	
 	subject = from + " , " + company + " , " + phone;
 	
-    $(location).attr('href', 'mailto:mfleming7024@gmail.com?subject='
+    $(location).attr('href', 'mailto:mpalmer@pinnaclelabservices.com?subject='
                              + encodeURIComponent(subject)
                              + "&body=" 
                              + encodeURIComponent(message)
